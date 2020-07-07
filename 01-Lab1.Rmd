@@ -1,0 +1,18 @@
+---
+title: "Lab 1: Error Analysis"
+output:
+  html_document: default
+  pdf_document: default
+date: "`r Sys.Date()`"
+---
+
+```{r , include=FALSE}
+library(ggplot2)
+knitr::opts_chunk$set(echo = TRUE)
+```
+# Lab1: Introduction to Error Analysis
+
+## To be filled
+
+## To be added
+

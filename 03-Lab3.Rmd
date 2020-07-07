@@ -1,0 +1,226 @@
+---
+title: "Lab3-Motion of Objects in Free Fall"
+output:
+  html_document:
+    df_print: paged
+  pdf_document: default
+date: "6/2/2020"
+---
+
+```{r , include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+# Lab 3: Motion of Objects in Free Fall
+
+## Part I: Green Rubber Ball
+$$m_1 = 80.8 \pm 0.1 g $$
+$$ d_1 = 6.75 \pm 0.01 cm $$
+```{r }
+
+time <- seq(0,0.75, by=0.05)
+Position<- c(-0.6, -0.44, -0.3, -0.18, -0.09, -0.03, 0.01, 0.03, 0.02, -0.02, -0.07, -0.15, -0.26, -0.38, -0.54, -0.73)
+Velocity <- c(NA, 3, 2.6, 2.1, 1.5, 1, 0.6, 0.1, -0.5, -0.9, -1, -1.9, -2.3, -2.8, -3.5, NA)
+```
+
+### Part I: Data Table
+```{r , echo=FALSE}
+data1 <- data.frame(time, Position, Velocity)
+data1
+```
+\newpage
+
+```{r , echo=FALSE}
+plot(data1$time, data1$Position,main="Position vs. Time", xlab="Time", ylab="Position", sub="Figure 1.1: Part I-Position vs Time" )
+```
+
+
+```{r ,echo=FALSE}
+vt1<- lm(Velocity~time, data1)
+plot(data1$time, data1$Velocity, main="Velocity vs. Time", xlab="Time", ylab="Velocity",sub="Figure 1.2: Part I-Velocity vs Time")
+abline(vt1)
+```
+\newpage
+```{r, echo=FALSE, comment=" "}
+summary(vt1)$coef
+```
+
+```{r , echo=FALSE, comment=" "}
+slope1 <- round(summary(vt1)$coef[2,1],3)
+intercept1<- round(summary(vt1)$coef[1,1],3)
+ei1 <- round(summary(vt1)$coef[1,2],3)
+es1 <- round(summary(vt1)$coef[2,2],3)
+```
+$$ v_o = `r intercept1` \pm `r ei1` \frac{m}{s} $$
+$$ a = `r slope1` \pm `r es1` \frac{m}{s^2} $$
+
+## Part II: Lead Ball
+$$m_2= 92.4 \pm 0.1 g $$
+$$ d_2 = 2.5 \pm 0.01 cm $$
+
+```{r }
+time <- seq(0,0.75, by=0.05)
+Position<- c(-0.6, -0.44, -0.395, -0.19, -0.11, -0.04, 0.0, 0.02, 0.0, -0.04, -0.095, -0.18, -0.29, -0.42, -0.54, -0.77)
+Velocity <- c(NA, 3.05, 2.5, 1.85, 1.5, 1.1, 0.6, 0.0, -0.6,-0.95, -1.4, -1.95, -2.4, -2.9, -3.5, NA)
+```
+### Part II: Data Table
+```{r , echo=FALSE}
+data2 <- data.frame(time, Position, Velocity)
+data2
+```
+\newpage 
+
+```{r , echo=FALSE}
+plot(data2$time, data2$Position,main="Position vs. Time", xlab="Time", ylab="Position", sub="Figure 2.1: Part II-Position vs Time" )
+```
+
+
+```{r ,echo=FALSE}
+vt2<- lm(Velocity~time, data2)
+plot(data2$time, data2$Velocity, main="Velocity vs. Time", xlab="Time", ylab="Velocity",sub="Figure 2.2: Part II-Velocity vs Time")
+abline(vt2)
+```
+\newpage
+```{r, echo=FALSE,comment=" "}
+summary(vt2)$coef
+```
+
+```{r , echo=FALSE,comment=" "}
+slope2 <- round(summary(vt2)$coef[2,1],3)
+intercept2<- round(summary(vt2)$coef[1,1],3)
+ei2 <- round(summary(vt2)$coef[1,2],3)
+es2 <- round(summary(vt2)$coef[2,2],3)
+```
+$$ v_o = `r intercept2` \pm `r ei2` \frac{m}{s} $$
+$$ a = `r slope2` \pm `r es2` \frac{m}{s^2} $$
+
+## Part III: Large Steel Ball
+$$m_3 = 535.1 \pm 0.1 g $$
+$$ d_3 = 5.08 \pm 0.01 cm $$
+
+```{r }
+time <- seq(0,0.7, by=0.05)
+Position<- c(-0.5, -0.36, -0.23, -0.13, -0.06, -0.01, 0.015, 0.03, 0.0, -0.05, -0.13, -0.22, -0.36, -0.48, -0.67)
+Velocity <- c(NA, 2.7, 2.3, 1.7, 1.2, 0.75, 0.4, -0.15, -0.8,-1.3, -1.7, -2.3, -2.6, -3.1,NA)
+```
+### Part III: Data Table
+```{r , echo=FALSE}
+data3 <- data.frame(time, Position, Velocity)
+data3
+```
+\newpage 
+
+```{r , echo=FALSE}
+plot(data3$time, data3$Position,main="Position vs. Time", xlab="Time", ylab="Position", sub="Figure 3.1: Part III-Position vs Time" )
+```
+
+
+```{r ,echo=FALSE}
+vt3<- lm(Velocity~time, data3)
+plot(data3$time, data3$Velocity, main="Velocity vs. Time", xlab="Time", ylab="Velocity",sub="Figure 3.2: Part III-Velocity vs Time")
+abline(vt3)
+```
+\newpage
+```{r, echo=FALSE,comment=" "}
+summary(vt3)$coef
+```
+
+```{r , echo=FALSE,comment=" "}
+slope3 <- round(summary(vt3)$coef[2,1],3)
+intercept3<- round(summary(vt3)$coef[1,1],3)
+ei3 <- round(summary(vt3)$coef[1,2],3)
+es3 <- round(summary(vt3)$coef[2,2],3)
+```
+$$ v_o = `r intercept3` \pm `r ei3` \frac{m}{s} $$
+
+$$ a = `r slope3` \pm `r es3` \frac{m}{s^2} $$
+
+## Part IV: Small Steel Ball
+$$m_4 = 8.6.1 \pm 0.1 g $$
+$$ d_4 = 1.29 \pm 0.01 cm $$
+
+```{r }
+time <- seq(0,0.75, by=0.05)
+Position<- c(-0.6, -0.44, -0.305, -0.195, -0.105, -0.045, 0.0, 0.005, -0.005, -0.045, -0.1, -0.185, -0.295, -0.435, -0.59, -0.78)
+Velocity <- c(NA, 2.95, 2.45, 2, 1.5, 1.05, 0.5, -0.05, -0.5,-0.95, -1.4, -1.95, -2.5, -2.95,-3.45,NA)
+```
+### Part IV: Data Table
+```{r , echo=FALSE}
+data4 <- data.frame(time, Position, Velocity)
+data4
+```
+\newpage 
+
+```{r , echo=FALSE}
+plot(data4$time, data4$Position,main="Position vs. Time", xlab="Time", ylab="Position", sub="Figure 4.1: Part IV-Position vs Time" )
+```
+
+
+```{r ,echo=FALSE}
+vt4<- lm(Velocity~time, data4)
+plot(data4$time, data4$Velocity, main="Velocity vs. Time", xlab="Time", ylab="Velocity",sub="Figure 4.2: Part IV-Velocity vs Time")
+abline(vt4)
+```
+\newpage
+```{r, echo=FALSE,comment=" "}
+summary(vt4)$coef
+```
+
+```{r , echo=FALSE,comment=" "}
+slope4 <- round(summary(vt4)$coef[2,1],3)
+intercept4<- round(summary(vt4)$coef[1,1],3)
+ei4 <- round(summary(vt4)$coef[1,2],3)
+es4 <- round(summary(vt4)$coef[2,2],3)
+```
+$$ v_o = `r intercept4` \pm `r ei4` \frac{m}{s} $$
+
+$$ a = `r slope4` \pm `r es4` \frac{m}{s^2} $$
+
+## Part V: Styrofoam Ball
+$$m_5 = 8.6.1 \pm 0.1 g $$
+$$ d_5 = 1.29 \pm 0.01 cm $$
+ 
+```{r }
+time <- seq(0,0.75, by=0.05)
+Position<- c(-0.6, -0.43, -0.29, -0.18, -0.10, -0.03, 0.01, 0.02, 0.01, -0.03, -0.08, -0.18, -0.27, -0.4,-0.55, -0.73)
+Velocity <- c(NA, 3.1, 2.5, 1.9, 1.7, 1.1, 0.5, 0, -0.5,-0.9, -1.5, -1.9, -2.2, -2.8,-3.3,NA)
+```
+### Part V: Data Table
+```{r , echo=FALSE}
+data5 <- data.frame(time, Position, Velocity)
+data5
+```
+\newpage 
+
+```{r , echo=FALSE}
+plot(data5$time, data5$Position,main="Position vs. Time", xlab="Time", ylab="Position", sub="Figure 5.1: Part V-Position vs Time" )
+```
+
+
+```{r ,echo=FALSE}
+vt5<- lm(Velocity~time, data5)
+plot(data5$time, data5$Velocity, main="Velocity vs. Time", xlab="Time", ylab="Velocity",sub="Figure 5.2: Part V-Velocity vs Time")
+abline(vt5)
+```
+\newpage
+```{r, echo=FALSE,comment=" "}
+summary(vt5)$coef
+```
+
+```{r , echo=FALSE,comment=" "}
+slope5 <- round(summary(vt5)$coef[2,1],3)
+intercept5<- round(summary(vt5)$coef[1,1],3)
+ei5 <- round(summary(vt5)$coef[1,2],3)
+es5 <- round(summary(vt5)$coef[2,2],3)
+```
+$$ v_o = `r intercept5` \pm `r ei5` \frac{m}{s} $$
+
+$$ a = `r slope5` \pm `r es5` \frac{m}{s^2} $$
+```{r}
+g <- c(slope1, slope2, slope3, slope4, slope5)
+gavg <- mean(g)
+stdg <- sd(g)
+dg <- round(stdg/sqrt(5),3)
+
+```
+
+$$ g = `r gavg` \pm `r dg` \frac{m}{s^2} $$

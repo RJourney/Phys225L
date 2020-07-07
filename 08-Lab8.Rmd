@@ -1,0 +1,48 @@
+---
+title: "Lab 8: Conservation of Momentum"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#Lab8: Conservation of Momentum
+
+## Elastic Collision
+
+### Both Moving with Same Speed
+
+$$ m_R = m_L = 150g $$
+
+#### Before Collision
+![Figure 1: Before collision for both carts moving with same speed](./figures/Question1.png)
+
+####  After Collision
+![Figure 2: After collision for both carts moving at with same speed](./figures/Question2.png)
+
+###  Right cart stationary
+$$ m_R = m_L = 150g $$
+
+####  Before Collision
+![Figure 3: Before collision, right cart stationary](./figures/Qurstion4.png)
+
+####  After Collision
+![Figure 4: After collision, right cart stationary](./figures/Question5.png)
+###  Right Car moving faster
+$$ m_R = m_L = 150g $$
+
+####  Before Collision
+![Figure 5: Before collision, right cart moving faster](./figures/Question7.png)
+
+####  After Collision
+![Figure 6: After collision, right cart moving faster](./figures/Question 8.png)
+
+# Inelastic Collision
+$$ m_R = m_L = 200g $$
+####  Before Collision
+![Table IE(i): Before Collision](./figures/IET1.png)
+![Figure 7: Before Collision](./figures/IE1.png)
+![Table IE(ii): After Collision](./figures/IET2.png)
+![Figure 8: Before Collision](./figures/IE2.png)

@@ -1,0 +1,153 @@
+---
+title: "Lab 2: Motion of the Glider"
+output:
+  html_document: default
+  pdf_document: default
+date: "6/1/2020"
+---
+
+```{r , include=FALSE}
+library(ggplot2)
+knitr::opts_chunk$set(echo = TRUE)
+```
+# Lab2: Position, Velocity, and Acceleration
+
+## Part1: Motion of the glider 
+
+Mass of the glider, m= 0.80 kg and the strenth of fan force was selected to level 3.
+
+### Data
+```{r}
+time <- seq(0,0.9, by=0.1)
+Position<- c(0,0.02,0.06, 0.115, 0.19, 0.29, 0.4, 0.53, 0.68, 0.84)
+Velocity <- c(0,0.3,0.475, 0.65, 0.875, 1.05, 1.2, 1.4, 1.55,NA)
+```
+
+### Creating a data table
+```{r}
+data <- data.frame(time, Position, Velocity)
+data
+```
+
+### Plotting Position vs. Time
+```{r}
+plot(data$time, data$Position,main="Position vs. Time", xlab="Time", ylab="Position" )
+```
+
+### Plotting Velocity vs. Time
+```{r}
+fit2<- lm(Velocity~time, data)
+plot(data$time, data$Velocity, main="Velocity vs. Time", xlab="Time", ylab="Velocity")
+abline(fit2)
+```
+
+### Fitting the linear regression model and extracting the coefficients
+```{r}
+summary(fit2)
+summary(fit2)$coef
+slope <- round(summary(fit2)$coef[2,1],3)
+intercept<- round(summary(fit2)$coef[1,1],3)
+errorintercept <- round(summary(fit2)$coef[1,2],3)
+errorslope <- round(summary(fit2)$coef[2,2],3)
+```
+
+
+
+
+## Plots using ggplot
+### Position vs. Time
+```{r, message=FALSE, warning=FALSE}
+g1<- ggplot(data, aes(x=time, y=Position))+
+        geom_point(size = 2, colour = "red", alpha=0.5)+
+        xlab("Time")+
+        ylab("Position") +
+        ggtitle("Position vs. time") 
+        
+        
+g1
+```
+
+###Velocity vs. Time
+```{r, message=FALSE, warning=FALSE}
+g2 <- ggplot(data, aes(x=time, y=Velocity))+
+        geom_smooth(method = "lm", colour = "black") + 
+        xlab("Time")+
+        ylab("Velocity") +
+        ggtitle("Velocity vs. time") + 
+        geom_point(size = 2, colour = "blue", alpha=0.5)
+        
+g2
+```
+$$ v_o= `r intercept` \pm `r errorintercept`  \frac{m}{s} $$
+$$ a= `r slope` \pm `r errorslope`  \frac{m}{s^2} $$
+
+### Exporting data as csv file. 
+```{r}
+write.table(data, "./ErrorAnalysis.csv")
+```
+
+## Part2: Acceleration of a Turbine-Powered Glider
+
+Here's the collected data
+```{r}
+time <- seq(0,1.4, by=0.1)
+Position<- c(0,0.23,0.428, 0.59, 0.72, 0.815, 0.88, 0.91, 0.905, 0.87,0.8, 0.695,0.56,0.385, 0.18)
+Velocity <- c(NA,2.14,1.8,1.46,1.12, 0.8, 0.475, 0.125, -0.2, -0.525, -0.875,-1.2,-1.55,-1.72,NA)
+```
+
+### Creating a data table
+```{r}
+data1 <- data.frame(time, Position, Velocity)
+data1
+```
+
+### Plotting Position vs. Time
+```{r}
+plot(data1$time, data1$Position,main="Position vs. Time", xlab="Time", ylab="Position" )
+```
+
+### Plotting Velocity vs. Time
+```{r}
+fit3<- lm(Velocity~time, data1)
+plot(data1$time, data1$Velocity, main="Velocity vs. Time", xlab="Time", ylab="Velocity")
+abline(fit3)
+```
+
+### Fitting the linear regression model and extracting the coefficients
+```{r}
+summary(fit3)
+summary(fit3)$coef
+slope1 <- round(summary(fit3)$coef[2,1],3)
+intercept1<- round(summary(fit3)$coef[1,1],3)
+errorintercept1 <- round(summary(fit3)$coef[1,2],3)
+errorslope1 <- round(summary(fit3)$coef[2,2],3)
+```
+
+
+## Plots using ggplot
+### Position vs. Time
+```{r, message=FALSE, warning=FALSE}
+g3<- ggplot(data1, aes(x=time, y=Position))+
+        geom_point(size = 2, colour = "red", alpha=0.5)+
+        xlab("Time")+
+        ylab("Position") +
+        ggtitle("Position vs. time") 
+        
+        
+g3
+```
+
+###Velocity vs. Time
+```{r, message=FALSE, warning=FALSE}
+g4 <- ggplot(data1, aes(x=time, y=Velocity))+
+        geom_smooth(method = "lm", colour = "black") + 
+        xlab("Time")+
+        ylab("Velocity") +
+        ggtitle("Velocity vs. time") + 
+        geom_point(size = 2, colour = "blue", alpha=0.5)
+        
+g4
+```
+
+$$ v_o= `r intercept1` \pm `r errorintercept1`  \frac{m}{s} $$
+$$ a= `r slope1` \pm `r errorslope1`  \frac{m}{s^2} $$

@@ -1,0 +1,114 @@
+---
+output:
+  html_document: default
+  pdf_document: default
+---
+```{r date, echo=FALSE, message=FALSE, warning=FALSE}
+library(knitr)
+library(ggplot2)
+today <- Sys.Date()
+today<- format(today, format="%B %d %Y")
+```
+
+---
+title: "Lab 5:Modified Atwood's Machine and Newton's 2nd Law"
+date: `r today`
+output: pdf_document
+---
+
+```{r , include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+# Lab 5:Modified Atwood's Machine and Newton's 2nd Law
+
+```{r , echo=FALSE, message=FALSE, warning=FALSE}
+library(plotly)
+t <- seq(0,0.55, by=0.05)
+x<- c(0.0, 0.01,0.025,0.045, 0.07, 0.105, 0.145, 0.19, 0.24, 0.3, 0.36, 0.43)
+vx <- c(NA,0.25, 0.35,0.45,0.6, 0.75, 0.85, 0.95, 1.1, 1.2, 1.3,NA)
+y <- c(0.425,0.42,0.41, 0.39, 0.365, 0.34, 0.3, 0.265, 0.215, 0.16, 0.1, 0.04)
+vy<- c(NA,-0.15, -0.3, -0.45, -0.5, -0.65, -0.75, -0.85, -1.05, -1.15, -1.2, NA)
+
+```
+
+
+```{r, echo=FALSE, comment=" "}
+lab5 <- data.frame(t,x,y,vx, vy)
+lab5
+```
+### Horizontal Mass
+```{r ,echo=TRUE}
+x1 <- ggplot(lab5, aes(t, x)) +
+         geom_point(col="red") +
+         theme(plot.title = element_text(hjust=0.5)) +
+         labs(title = "Displacement of the horizontal mass", x="Time", y = "Position")+
+         theme(plot.title = element_text(color="blue", size=14, face="bold"))
+
+x1
+```
+\newpage
+Coefficients of the horizontal mass
+```{r x,echo=TRUE,warning=FALSE, comment=" "}
+xt <- lm(vx~t, lab5)
+summary(xt)$coef
+slope1 <- round(summary(xt)$coef[2,1],3)
+intercept1<- round(summary(xt)$coef[1,1],3)
+ei1 <- round(summary(xt)$coef[1,2],3)
+es1 <- round(summary(xt)$coef[2,2],3)
+```
+
+
+
+```{r vx,echo=TRUE, warning=FALSE}
+v1<- ggplot(lab5, aes(t, vx)) +
+        geom_smooth(method='lm', formula=y~x, se=FALSE)+
+        geom_point(col="red") +
+        theme(plot.title = element_text(hjust=0.5)) +
+        labs(title = "Velocity of horizontal mass", x="Time", y = "Velocity")+
+        theme(plot.title = element_text(color="blue", size=14, face="bold"))
+v1
+
+```
+
+Initial velocity of the horizontal mass  
+$$ v_x = `r intercept1` \pm `r ei1` \frac{m}{s} $$
+Acceleration of the horizontal mass
+$$ a_x = `r slope1` \pm `r es1` \frac{m}{s^2} $$
+
+### Hanging Mass
+
+```{r y1,echo=TRUE}
+y1 <- ggplot(lab5, aes(t, y)) +
+         geom_point(col="green") +
+         theme(plot.title = element_text(hjust=0.5)) +
+         labs(title = "Displacement of the hanging mass", x="Time", y = "Position")+
+         theme(plot.title = element_text(color="blue", size=14, face="bold"))
+
+y1
+```
+
+Coefficients of the vertical mass
+```{r y,echo=TRUE,warning=FALSE, comment=" "}
+yt <- lm(vy~t, lab5)
+summary(yt)$coef
+slope2 <- round(summary(yt)$coef[2,1],3)
+intercept2<- round(summary(yt)$coef[1,1],3)
+ei2 <- round(summary(yt)$coef[1,2],3)
+es2 <- round(summary(yt)$coef[2,2],3)
+```
+
+```{r vy,echo=TRUE, warning=FALSE}
+v2<- ggplot(lab5, aes(t, vy)) +
+        geom_smooth(method='lm', formula=y~x, se=FALSE)+
+        geom_point(col="green") +
+        theme(plot.title = element_text(hjust=0.5)) +
+        labs(title = "Velocity of the hanging mass", x="Time", y = "Velocity")+
+        theme(plot.title = element_text(color="blue", size=14, face="bold"))
+v2
+
+```
+
+Initial velocity of the vertical mass  
+$$ v_y = `r intercept2` \pm `r ei2` \frac{m}{s} $$
+Acceleration of the vertical mass
+$$ a_y = `r slope2` \pm `r es2` \frac{m}{s^2} $$
