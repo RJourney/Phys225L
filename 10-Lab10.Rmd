@@ -1,0 +1,56 @@
+
+# Lab 10: Torque
+
+```{r  angle, echo=FALSE,message=FALSE,warning=FALSE, comment=" "}
+
+
+g <- 9.8
+r <- 0.35
+Trials <- c('Perp1', 'Perp2','Perp3','Perp4')
+
+
+Angle <- rep(90, each=4)
+Anglerad <- 
+Mass_kg <- c(4.54, 15.95, 27.31, 31.86)
+Fperp <- Mass_kg * g *sin(pi/2)
+T_calc <- Fperp * r
+T_meas <- c(15.6, 54.8, 93.8, 109.6)
+Perc_Diff <- (abs(T_meas - T_calc)/((T_meas+T_calc)/2) * 100)
+
+Table1 <- data.frame(Trials, Angle, Mass_kg, Fperp, T_calc, T_meas, Perc_Diff)
+
+
+
+```
+
+
+```{r perp, echo=FALSE,message=FALSE,warning=FALSE, comment=" "}
+g <- 9.8
+r <- 0.35
+
+Trials <- c('AngleT1', 'AngleT2', 'AngleT3', 'AngleT4')
+
+Angle <- c(111, 113.5, 80, 82)
+Anglerad <- (pi/180)*Angle
+Mass_kg <- c(4.54, 15.95,4.54, 15.95)
+Fperp <- Mass_kg * g *sin(Anglerad)
+T_calc <- Fperp * r
+T_meas <- c(14.6, 50.6, 15.3, 54.9)
+Perc_Diff <- ((abs(T_meas - T_calc))/((T_meas+T_calc)/2) * 100)
+
+Table2 <- data.frame(Trials, Angle, Mass_kg, Fperp, T_calc, T_meas, Perc_Diff)
+
+
+
+
+```
+
+
+
+```{r table, echo=FALSE,message=FALSE,warning=FALSE, comment=" "}
+
+Table <- rbind(Table1, Table2)
+Table
+
+
+```

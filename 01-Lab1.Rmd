@@ -1,18 +1,18 @@
 ---
-title: "Lab 1: Error Analysis"
+title: 'Lab 1: Error Analysis'
+author: "Ionel Tifrea, Leigh Hargreaves, Shovit Bhari"
+date: "6/5/2020"
 output:
-  html_document: default
-  pdf_document: default
-date: "`r Sys.Date()`"
+  html_document:
+    df_print: paged
 ---
 
 ```{r , include=FALSE}
 library(ggplot2)
 knitr::opts_chunk$set(echo = TRUE)
 ```
-# Lab1: Introduction to Error Analysis
 
-## To be filled
+## Error Analysis lab file
 
-## To be added
+[Error Analysis](./ErrorNotes_v4.pdf)
 

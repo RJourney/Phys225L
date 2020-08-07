@@ -1,0 +1,7 @@
+
+
+# Lab 12: Simple Pendulum
+
+![Data Table](./figures/Lab12_Data.png)
+
+![Graph](./figures/Lab12_Plot.png)

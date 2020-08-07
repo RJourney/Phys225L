@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 8 Lab 8: Conservation of Energy | PHYS 225 Labs</title>
+  <meta name="description" content="This is collection of data tables and figures for all the 225L conducted over Summer 2020 in Pivot Interactives" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 8 Lab 8: Conservation of Energy | PHYS 225 Labs" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is collection of data tables and figures for all the 225L conducted over Summer 2020 in Pivot Interactives" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 8 Lab 8: Conservation of Energy | PHYS 225 Labs" />
+  
+  <meta name="twitter:description" content="This is collection of data tables and figures for all the 225L conducted over Summer 2020 in Pivot Interactives" />
+  
+
+<meta name="author" content="Ionel Tifrea, Leigh Hargreaves, Shovit Bhari" />
+
+
+<meta name="date" content="2020-08-07" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="lab-6-simple-harmonic-motion.html"/>
+<link rel="next" href="lab-9-conservation-of-momentum.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+<script src="libs/plotly-binding-4.9.2.1/plotly.js"></script>
+<script src="libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="libs/crosstalk-1.1.0.1/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.1.0.1/js/crosstalk.min.js"></script>
+<link href="libs/plotly-htmlwidgets-css-1.52.2/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-1.52.2/plotly-latest.min.js"></script>
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">PHYS 2225 Labs</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#error-analysis-lab-file"><i class="fa fa-check"></i><b>1.1</b> Error Analysis lab file</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="lab2-position-velocity-and-acceleration.html"><a href="lab2-position-velocity-and-acceleration.html"><i class="fa fa-check"></i><b>2</b> Lab2: Position, Velocity, and Acceleration</a><ul>
+<li class="chapter" data-level="2.1" data-path="lab2-position-velocity-and-acceleration.html"><a href="lab2-position-velocity-and-acceleration.html#part1-motion-of-the-glider"><i class="fa fa-check"></i><b>2.1</b> Part1: Motion of the glider</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="lab2-position-velocity-and-acceleration.html"><a href="lab2-position-velocity-and-acceleration.html#data"><i class="fa fa-check"></i><b>2.1.1</b> Data</a></li>
+<li class="chapter" data-level="2.1.2" data-path="lab2-position-velocity-and-acceleration.html"><a href="lab2-position-velocity-and-acceleration.html#creating-a-data-table"><i class="fa fa-check"></i><b>2.1.2</b> Creating a data table</a></li>
+<li class="chapter" data-level="2.1.3" data-path="lab2-position-velocity-and-acceleration.html"><a href="lab2-position-velocity-and-acceleration.html#plotting-position-vs.time"><i class="fa fa-check"></i><b>2.1.3</b> Plotting Position vs. Time</a></li>
+<li class="chapter" data-level="2.1.4" data-path="lab2-position-velocity-and-acceleration.html"><a href="lab2-position-velocity-and-acceleration.html#plotting-velocity-vs.time"><i class="fa fa-check"></i><b>2.1.4</b> Plotting Velocity vs. Time</a></li>
+<li class="chapter" data-level="2.1.5" data-path="lab2-position-velocity-and-acceleration.html"><a href="lab2-position-velocity-and-acceleration.html#fitting-the-linear-regression-model-and-extracting-the-coefficients"><i class="fa fa-check"></i><b>2.1.5</b> Fitting the linear regression model and extracting the coefficients</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="lab2-position-velocity-and-acceleration.html"><a href="lab2-position-velocity-and-acceleration.html#plots-using-ggplot"><i class="fa fa-check"></i><b>2.2</b> Plots using ggplot</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="lab2-position-velocity-and-acceleration.html"><a href="lab2-position-velocity-and-acceleration.html#position-vs.time"><i class="fa fa-check"></i><b>2.2.1</b> Position vs. Time</a></li>
+<li class="chapter" data-level="2.2.2" data-path="lab2-position-velocity-and-acceleration.html"><a href="lab2-position-velocity-and-acceleration.html#exporting-data-as-csv-file."><i class="fa fa-check"></i><b>2.2.2</b> Exporting data as csv file.</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="lab2-position-velocity-and-acceleration.html"><a href="lab2-position-velocity-and-acceleration.html#part2-acceleration-of-a-turbine-powered-glider"><i class="fa fa-check"></i><b>2.3</b> Part2: Acceleration of a Turbine-Powered Glider</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="lab2-position-velocity-and-acceleration.html"><a href="lab2-position-velocity-and-acceleration.html#creating-a-data-table-1"><i class="fa fa-check"></i><b>2.3.1</b> Creating a data table</a></li>
+<li class="chapter" data-level="2.3.2" data-path="lab2-position-velocity-and-acceleration.html"><a href="lab2-position-velocity-and-acceleration.html#plotting-position-vs.time-1"><i class="fa fa-check"></i><b>2.3.2</b> Plotting Position vs. Time</a></li>
+<li class="chapter" data-level="2.3.3" data-path="lab2-position-velocity-and-acceleration.html"><a href="lab2-position-velocity-and-acceleration.html#plotting-velocity-vs.time-1"><i class="fa fa-check"></i><b>2.3.3</b> Plotting Velocity vs. Time</a></li>
+<li class="chapter" data-level="2.3.4" data-path="lab2-position-velocity-and-acceleration.html"><a href="lab2-position-velocity-and-acceleration.html#fitting-the-linear-regression-model-and-extracting-the-coefficients-1"><i class="fa fa-check"></i><b>2.3.4</b> Fitting the linear regression model and extracting the coefficients</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="lab2-position-velocity-and-acceleration.html"><a href="lab2-position-velocity-and-acceleration.html#plots-using-ggplot-1"><i class="fa fa-check"></i><b>2.4</b> Plots using ggplot</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="lab2-position-velocity-and-acceleration.html"><a href="lab2-position-velocity-and-acceleration.html#position-vs.time-1"><i class="fa fa-check"></i><b>2.4.1</b> Position vs. Time</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="lab-3-motion-of-objects-in-free-fall.html"><a href="lab-3-motion-of-objects-in-free-fall.html"><i class="fa fa-check"></i><b>3</b> Lab 3: Motion of Objects in Free Fall</a><ul>
+<li class="chapter" data-level="3.1" data-path="lab-3-motion-of-objects-in-free-fall.html"><a href="lab-3-motion-of-objects-in-free-fall.html#part-i-green-rubber-ball"><i class="fa fa-check"></i><b>3.1</b> Part I: Green Rubber Ball</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="lab-3-motion-of-objects-in-free-fall.html"><a href="lab-3-motion-of-objects-in-free-fall.html#part-i-data-table"><i class="fa fa-check"></i><b>3.1.1</b> Part I: Data Table</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="lab-3-motion-of-objects-in-free-fall.html"><a href="lab-3-motion-of-objects-in-free-fall.html#part-ii-lead-ball"><i class="fa fa-check"></i><b>3.2</b> Part II: Lead Ball</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="lab-3-motion-of-objects-in-free-fall.html"><a href="lab-3-motion-of-objects-in-free-fall.html#part-ii-data-table"><i class="fa fa-check"></i><b>3.2.1</b> Part II: Data Table</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="lab-3-motion-of-objects-in-free-fall.html"><a href="lab-3-motion-of-objects-in-free-fall.html#part-iii-large-steel-ball"><i class="fa fa-check"></i><b>3.3</b> Part III: Large Steel Ball</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="lab-3-motion-of-objects-in-free-fall.html"><a href="lab-3-motion-of-objects-in-free-fall.html#part-iii-data-table"><i class="fa fa-check"></i><b>3.3.1</b> Part III: Data Table</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="lab-3-motion-of-objects-in-free-fall.html"><a href="lab-3-motion-of-objects-in-free-fall.html#part-iv-small-steel-ball"><i class="fa fa-check"></i><b>3.4</b> Part IV: Small Steel Ball</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="lab-3-motion-of-objects-in-free-fall.html"><a href="lab-3-motion-of-objects-in-free-fall.html#part-iv-data-table"><i class="fa fa-check"></i><b>3.4.1</b> Part IV: Data Table</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="lab-3-motion-of-objects-in-free-fall.html"><a href="lab-3-motion-of-objects-in-free-fall.html#part-v-styrofoam-ball"><i class="fa fa-check"></i><b>3.5</b> Part V: Styrofoam Ball</a><ul>
+<li class="chapter" data-level="3.5.1" data-path="lab-3-motion-of-objects-in-free-fall.html"><a href="lab-3-motion-of-objects-in-free-fall.html#part-v-data-table"><i class="fa fa-check"></i><b>3.5.1</b> Part V: Data Table</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="lab-4-three-views-of-projectile-ball.html"><a href="lab-4-three-views-of-projectile-ball.html"><i class="fa fa-check"></i><b>4</b> Lab 4: Three Views of Projectile Ball</a><ul>
+<li class="chapter" data-level="4.1" data-path="lab2-position-velocity-and-acceleration.html"><a href="lab2-position-velocity-and-acceleration.html#data"><i class="fa fa-check"></i><b>4.1</b> Data</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="lab-5modified-atwoods-machine-and-newtons-2nd-law.html"><a href="lab-5modified-atwoods-machine-and-newtons-2nd-law.html"><i class="fa fa-check"></i><b>5</b> Lab 5:Modified Atwood’s Machine and Newton’s 2nd Law</a><ul>
+<li class="chapter" data-level="5.0.1" data-path="lab-5modified-atwoods-machine-and-newtons-2nd-law.html"><a href="lab-5modified-atwoods-machine-and-newtons-2nd-law.html#horizontal-mass"><i class="fa fa-check"></i><b>5.0.1</b> Horizontal Mass</a></li>
+<li class="chapter" data-level="5.0.2" data-path="lab-5modified-atwoods-machine-and-newtons-2nd-law.html"><a href="lab-5modified-atwoods-machine-and-newtons-2nd-law.html#hanging-mass"><i class="fa fa-check"></i><b>5.0.2</b> Hanging Mass</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="measuring-the-coefficient-of-static-friciton.html"><a href="measuring-the-coefficient-of-static-friciton.html"><i class="fa fa-check"></i><b>6</b> Measuring the coefficient of Static Friciton</a></li>
+<li class="chapter" data-level="7" data-path="lab-6-simple-harmonic-motion.html"><a href="lab-6-simple-harmonic-motion.html"><i class="fa fa-check"></i><b>7</b> Lab 6: Simple Harmonic Motion</a><ul>
+<li class="chapter" data-level="7.1" data-path="lab-6-simple-harmonic-motion.html"><a href="lab-6-simple-harmonic-motion.html#spring-constant"><i class="fa fa-check"></i><b>7.1</b> Spring Constant</a></li>
+<li class="chapter" data-level="7.2" data-path="lab-6-simple-harmonic-motion.html"><a href="lab-6-simple-harmonic-motion.html#data-set"><i class="fa fa-check"></i><b>7.2</b> Data Set</a></li>
+<li class="chapter" data-level="7.3" data-path="lab-6-simple-harmonic-motion.html"><a href="lab-6-simple-harmonic-motion.html#plot"><i class="fa fa-check"></i><b>7.3</b> Plot</a></li>
+<li class="chapter" data-level="7.4" data-path="lab-6-simple-harmonic-motion.html"><a href="lab-6-simple-harmonic-motion.html#results"><i class="fa fa-check"></i><b>7.4</b> Results</a></li>
+<li class="chapter" data-level="7.5" data-path="lab-6-simple-harmonic-motion.html"><a href="lab-6-simple-harmonic-motion.html#spring-oscillator-on-an-air-track"><i class="fa fa-check"></i><b>7.5</b> Spring Oscillator on an Air Track</a></li>
+<li class="chapter" data-level="7.6" data-path="lab-6-simple-harmonic-motion.html"><a href="lab-6-simple-harmonic-motion.html#data-set-1"><i class="fa fa-check"></i><b>7.6</b> Data Set</a></li>
+<li class="chapter" data-level="7.7" data-path="lab-6-simple-harmonic-motion.html"><a href="lab-6-simple-harmonic-motion.html#plot-1"><i class="fa fa-check"></i><b>7.7</b> Plot</a></li>
+<li class="chapter" data-level="7.8" data-path="lab-6-simple-harmonic-motion.html"><a href="lab-6-simple-harmonic-motion.html#results-1"><i class="fa fa-check"></i><b>7.8</b> Results</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="lab-8-conservation-of-energy.html"><a href="lab-8-conservation-of-energy.html"><i class="fa fa-check"></i><b>8</b> Lab 8: Conservation of Energy</a></li>
+<li class="chapter" data-level="9" data-path="lab-9-conservation-of-momentum.html"><a href="lab-9-conservation-of-momentum.html"><i class="fa fa-check"></i><b>9</b> Lab 9: Conservation of Momentum</a><ul>
+<li class="chapter" data-level="9.1" data-path="lab-9-conservation-of-momentum.html"><a href="lab-9-conservation-of-momentum.html#elastic-collision"><i class="fa fa-check"></i><b>9.1</b> Elastic Collision</a><ul>
+<li class="chapter" data-level="9.1.1" data-path="lab-9-conservation-of-momentum.html"><a href="lab-9-conservation-of-momentum.html#both-moving-with-same-speed"><i class="fa fa-check"></i><b>9.1.1</b> Both Moving with Same Speed</a></li>
+<li class="chapter" data-level="9.1.2" data-path="lab-9-conservation-of-momentum.html"><a href="lab-9-conservation-of-momentum.html#right-cart-stationary"><i class="fa fa-check"></i><b>9.1.2</b> Right cart stationary</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="lab-9-conservation-of-momentum.html"><a href="lab-9-conservation-of-momentum.html#inelastic-collision"><i class="fa fa-check"></i><b>9.2</b> Inelastic Collision</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="lab-10-torque.html"><a href="lab-10-torque.html"><i class="fa fa-check"></i><b>10</b> Lab 10: Torque</a></li>
+<li class="chapter" data-level="11" data-path="lab-11-ballistic-pendulum.html"><a href="lab-11-ballistic-pendulum.html"><i class="fa fa-check"></i><b>11</b> Lab 11: Ballistic Pendulum</a><ul>
+<li class="chapter" data-level="11.0.1" data-path="lab2-position-velocity-and-acceleration.html"><a href="lab2-position-velocity-and-acceleration.html#data"><i class="fa fa-check"></i><b>11.0.1</b> Data</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="lab-12-simple-pendulum.html"><a href="lab-12-simple-pendulum.html"><i class="fa fa-check"></i><b>12</b> Lab 12: Simple Pendulum</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">PHYS 225 Labs</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="lab-8-conservation-of-energy" class="section level1">
+<h1><span class="header-section-number">Chapter 8</span> Lab 8: Conservation of Energy</h1>
+<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb68-1" data-line-number="1">data &lt;-<span class="st"> </span><span class="kw">data.frame</span>(tA,xA, tC, xC, tH, xH, tI, xI, tK, xK)</a></code></pre></div>
+<pre><code>    height velocity velocitysq
+  1  0.030    0.474   0.224676
+  2  0.085    1.000   1.000000
+  3  0.205    1.902   3.617604
+  4  0.235    2.027   4.108729
+  5  0.290    2.309   5.331481</code></pre>
+<div class="sourceCode" id="cb70"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb70-1" data-line-number="1">g &lt;-<span class="st"> </span><span class="kw">ggplot</span>(<span class="dt">data=</span>datav, <span class="kw">aes</span>(<span class="dt">x=</span>height, <span class="dt">y=</span>velocitysq)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb70-2" data-line-number="2"><span class="st">        </span><span class="kw">geom_point</span>(<span class="dt">col=</span><span class="st">&quot;red&quot;</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb70-3" data-line-number="3"><span class="st">        </span><span class="kw">geom_smooth</span>(<span class="dt">method=</span><span class="st">&#39;lm&#39;</span>, <span class="dt">se=</span><span class="ot">TRUE</span>) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb70-4" data-line-number="4"><span class="st">        </span><span class="kw">theme</span>(<span class="dt">plot.title =</span> <span class="kw">element_text</span>(<span class="dt">hjust=</span><span class="fl">0.5</span>)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb70-5" data-line-number="5"><span class="st">        </span><span class="kw">labs</span>(<span class="dt">title =</span> <span class="st">&quot;Velocity Squared vs Height&quot;</span>, <span class="dt">x=</span><span class="st">&quot;Height&quot;</span>, <span class="dt">y =</span> <span class="st">&quot;Velocity Squared&quot;</span>)<span class="op">+</span></a>
+<a class="sourceLine" id="cb70-6" data-line-number="6"><span class="st">        </span><span class="kw">theme</span>(<span class="dt">plot.title =</span> <span class="kw">element_text</span>(<span class="dt">color=</span><span class="st">&quot;blue&quot;</span>, <span class="dt">size=</span><span class="dv">14</span>, <span class="dt">face=</span><span class="st">&quot;bold&quot;</span>))</a>
+<a class="sourceLine" id="cb70-7" data-line-number="7">p &lt;-<span class="st"> </span><span class="kw">ggplotly</span>(g)</a></code></pre></div>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb72-1" data-line-number="1">p</a></code></pre></div>
+<div id="htmlwidget-a87dcd685f284a9a45ad" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-a87dcd685f284a9a45ad">{"x":{"data":[{"x":[0.03,0.085,0.205,0.235,0.29],"y":[0.224676,1,3.617604,4.108729,5.331481],"text":["height: 0.030<br />velocitysq: 0.224676","height: 0.085<br />velocitysq: 1.000000","height: 0.205<br />velocitysq: 3.617604","height: 0.235<br />velocitysq: 4.108729","height: 0.290<br />velocitysq: 5.331481"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(255,0,0,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(255,0,0,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[0.03,0.0332911392405063,0.0365822784810127,0.039873417721519,0.0431645569620253,0.0464556962025316,0.049746835443038,0.0530379746835443,0.0563291139240506,0.059620253164557,0.0629113924050633,0.0662025316455696,0.0694936708860759,0.0727848101265823,0.0760759493670886,0.0793670886075949,0.0826582278481013,0.0859493670886076,0.0892405063291139,0.0925316455696202,0.0958227848101266,0.0991139240506329,0.102405063291139,0.105696202531646,0.108987341772152,0.112278481012658,0.115569620253165,0.118860759493671,0.122151898734177,0.125443037974684,0.12873417721519,0.132025316455696,0.135316455696203,0.138607594936709,0.141898734177215,0.145189873417722,0.148481012658228,0.151772151898734,0.155063291139241,0.158354430379747,0.161645569620253,0.164936708860759,0.168227848101266,0.171518987341772,0.174810126582278,0.178101265822785,0.181392405063291,0.184683544303797,0.187974683544304,0.19126582278481,0.194556962025316,0.197848101265823,0.201139240506329,0.204430379746835,0.207721518987342,0.211012658227848,0.214303797468354,0.217594936708861,0.220886075949367,0.224177215189873,0.22746835443038,0.230759493670886,0.234050632911392,0.237341772151899,0.240632911392405,0.243924050632911,0.247215189873418,0.250506329113924,0.25379746835443,0.257088607594937,0.260379746835443,0.263670886075949,0.266962025316456,0.270253164556962,0.273544303797468,0.276835443037975,0.280126582278481,0.283417721518987,0.286708860759494,0.29],"y":[0.0827850322476973,0.148458957356121,0.214132882464544,0.279806807572968,0.345480732681391,0.411154657789815,0.476828582898238,0.542502508006662,0.608176433115086,0.673850358223509,0.739524283331933,0.805198208440356,0.87087213354878,0.936546058657203,1.00221998376563,1.06789390887405,1.13356783398247,1.1992417590909,1.26491568419932,1.33058960930774,1.39626353441617,1.46193745952459,1.52761138463302,1.59328530974144,1.65895923484986,1.72463315995829,1.79030708506671,1.85598101017513,1.92165493528356,1.98732886039198,2.0530027855004,2.11867671060883,2.18435063571725,2.25002456082567,2.3156984859341,2.38137241104252,2.44704633615094,2.51272026125937,2.57839418636779,2.64406811147622,2.70974203658464,2.77541596169306,2.84108988680149,2.90676381190991,2.97243773701833,3.03811166212676,3.10378558723518,3.1694595123436,3.23513343745203,3.30080736256045,3.36648128766887,3.4321552127773,3.49782913788572,3.56350306299415,3.62917698810257,3.69485091321099,3.76052483831942,3.82619876342784,3.89187268853626,3.95754661364469,4.02322053875311,4.08889446386153,4.15456838896996,4.22024231407838,4.2859162391868,4.35159016429523,4.41726408940365,4.48293801451207,4.5486119396205,4.61428586472892,4.67995978983735,4.74563371494577,4.81130764005419,4.87698156516262,4.94265549027104,5.00832941537946,5.07400334048789,5.13967726559631,5.20535119070473,5.27102511581316],"text":["height: 0.03000000<br />velocitysq: 0.08278503","height: 0.03329114<br />velocitysq: 0.14845896","height: 0.03658228<br />velocitysq: 0.21413288","height: 0.03987342<br />velocitysq: 0.27980681","height: 0.04316456<br />velocitysq: 0.34548073","height: 0.04645570<br />velocitysq: 0.41115466","height: 0.04974684<br />velocitysq: 0.47682858","height: 0.05303797<br />velocitysq: 0.54250251","height: 0.05632911<br />velocitysq: 0.60817643","height: 0.05962025<br />velocitysq: 0.67385036","height: 0.06291139<br />velocitysq: 0.73952428","height: 0.06620253<br />velocitysq: 0.80519821","height: 0.06949367<br />velocitysq: 0.87087213","height: 0.07278481<br />velocitysq: 0.93654606","height: 0.07607595<br />velocitysq: 1.00221998","height: 0.07936709<br />velocitysq: 1.06789391","height: 0.08265823<br />velocitysq: 1.13356783","height: 0.08594937<br />velocitysq: 1.19924176","height: 0.08924051<br />velocitysq: 1.26491568","height: 0.09253165<br />velocitysq: 1.33058961","height: 0.09582278<br />velocitysq: 1.39626353","height: 0.09911392<br />velocitysq: 1.46193746","height: 0.10240506<br />velocitysq: 1.52761138","height: 0.10569620<br />velocitysq: 1.59328531","height: 0.10898734<br />velocitysq: 1.65895923","height: 0.11227848<br />velocitysq: 1.72463316","height: 0.11556962<br />velocitysq: 1.79030709","height: 0.11886076<br />velocitysq: 1.85598101","height: 0.12215190<br />velocitysq: 1.92165494","height: 0.12544304<br />velocitysq: 1.98732886","height: 0.12873418<br />velocitysq: 2.05300279","height: 0.13202532<br />velocitysq: 2.11867671","height: 0.13531646<br />velocitysq: 2.18435064","height: 0.13860759<br />velocitysq: 2.25002456","height: 0.14189873<br />velocitysq: 2.31569849","height: 0.14518987<br />velocitysq: 2.38137241","height: 0.14848101<br />velocitysq: 2.44704634","height: 0.15177215<br />velocitysq: 2.51272026","height: 0.15506329<br />velocitysq: 2.57839419","height: 0.15835443<br />velocitysq: 2.64406811","height: 0.16164557<br />velocitysq: 2.70974204","height: 0.16493671<br />velocitysq: 2.77541596","height: 0.16822785<br />velocitysq: 2.84108989","height: 0.17151899<br />velocitysq: 2.90676381","height: 0.17481013<br />velocitysq: 2.97243774","height: 0.17810127<br />velocitysq: 3.03811166","height: 0.18139241<br />velocitysq: 3.10378559","height: 0.18468354<br />velocitysq: 3.16945951","height: 0.18797468<br />velocitysq: 3.23513344","height: 0.19126582<br />velocitysq: 3.30080736","height: 0.19455696<br />velocitysq: 3.36648129","height: 0.19784810<br />velocitysq: 3.43215521","height: 0.20113924<br />velocitysq: 3.49782914","height: 0.20443038<br />velocitysq: 3.56350306","height: 0.20772152<br />velocitysq: 3.62917699","height: 0.21101266<br />velocitysq: 3.69485091","height: 0.21430380<br />velocitysq: 3.76052484","height: 0.21759494<br />velocitysq: 3.82619876","height: 0.22088608<br />velocitysq: 3.89187269","height: 0.22417722<br />velocitysq: 3.95754661","height: 0.22746835<br />velocitysq: 4.02322054","height: 0.23075949<br />velocitysq: 4.08889446","height: 0.23405063<br />velocitysq: 4.15456839","height: 0.23734177<br />velocitysq: 4.22024231","height: 0.24063291<br />velocitysq: 4.28591624","height: 0.24392405<br />velocitysq: 4.35159016","height: 0.24721519<br />velocitysq: 4.41726409","height: 0.25050633<br />velocitysq: 4.48293801","height: 0.25379747<br />velocitysq: 4.54861194","height: 0.25708861<br />velocitysq: 4.61428586","height: 0.26037975<br />velocitysq: 4.67995979","height: 0.26367089<br />velocitysq: 4.74563371","height: 0.26696203<br />velocitysq: 4.81130764","height: 0.27025316<br />velocitysq: 4.87698157","height: 0.27354430<br />velocitysq: 4.94265549","height: 0.27683544<br />velocitysq: 5.00832942","height: 0.28012658<br />velocitysq: 5.07400334","height: 0.28341772<br />velocitysq: 5.13967727","height: 0.28670886<br />velocitysq: 5.20535119","height: 0.29000000<br />velocitysq: 5.27102512"],"type":"scatter","mode":"lines","name":"fitted values","line":{"width":3.77952755905512,"color":"rgba(51,102,255,1)","dash":"solid"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[0.03,0.0332911392405063,0.0365822784810127,0.039873417721519,0.0431645569620253,0.0464556962025316,0.049746835443038,0.0530379746835443,0.0563291139240506,0.059620253164557,0.0629113924050633,0.0662025316455696,0.0694936708860759,0.0727848101265823,0.0760759493670886,0.0793670886075949,0.0826582278481013,0.0859493670886076,0.0892405063291139,0.0925316455696202,0.0958227848101266,0.0991139240506329,0.102405063291139,0.105696202531646,0.108987341772152,0.112278481012658,0.115569620253165,0.118860759493671,0.122151898734177,0.125443037974684,0.12873417721519,0.132025316455696,0.135316455696203,0.138607594936709,0.141898734177215,0.145189873417722,0.148481012658228,0.151772151898734,0.155063291139241,0.158354430379747,0.161645569620253,0.164936708860759,0.168227848101266,0.171518987341772,0.174810126582278,0.178101265822785,0.181392405063291,0.184683544303797,0.187974683544304,0.19126582278481,0.194556962025316,0.197848101265823,0.201139240506329,0.204430379746835,0.207721518987342,0.211012658227848,0.214303797468354,0.217594936708861,0.220886075949367,0.224177215189873,0.22746835443038,0.230759493670886,0.234050632911392,0.237341772151899,0.240632911392405,0.243924050632911,0.247215189873418,0.250506329113924,0.25379746835443,0.257088607594937,0.260379746835443,0.263670886075949,0.266962025316456,0.270253164556962,0.273544303797468,0.276835443037975,0.280126582278481,0.283417721518987,0.286708860759494,0.29,0.29,0.29,0.286708860759494,0.283417721518987,0.280126582278481,0.276835443037975,0.273544303797468,0.270253164556962,0.266962025316456,0.263670886075949,0.260379746835443,0.257088607594937,0.25379746835443,0.250506329113924,0.247215189873418,0.243924050632911,0.240632911392405,0.237341772151899,0.234050632911392,0.230759493670886,0.22746835443038,0.224177215189873,0.220886075949367,0.217594936708861,0.214303797468354,0.211012658227848,0.207721518987342,0.204430379746835,0.201139240506329,0.197848101265823,0.194556962025316,0.19126582278481,0.187974683544304,0.184683544303797,0.181392405063291,0.178101265822785,0.174810126582278,0.171518987341772,0.168227848101266,0.164936708860759,0.161645569620253,0.158354430379747,0.155063291139241,0.151772151898734,0.148481012658228,0.145189873417722,0.141898734177215,0.138607594936709,0.135316455696203,0.132025316455696,0.12873417721519,0.125443037974684,0.122151898734177,0.118860759493671,0.115569620253165,0.112278481012658,0.108987341772152,0.105696202531646,0.102405063291139,0.0991139240506329,0.0958227848101266,0.0925316455696202,0.0892405063291139,0.0859493670886076,0.0826582278481013,0.0793670886075949,0.0760759493670886,0.0727848101265823,0.0694936708860759,0.0662025316455696,0.0629113924050633,0.059620253164557,0.0563291139240506,0.0530379746835443,0.049746835443038,0.0464556962025316,0.0431645569620253,0.039873417721519,0.0365822784810127,0.0332911392405063,0.03,0.03],"y":[-0.276624353157761,-0.205235051669296,-0.133892194464421,-0.0625980883767715,0.00864482631556129,0.0798339682574111,0.150966607124501,0.222039855508592,0.293050660628873,0.363995795933449,0.434871852672179,0.505675231542379,0.576402134532318,0.647048557114128,0.717610280967902,0.788082867452282,0.858461652073635,0.928741740245461,0.998918004671278,1.0689850847268,1.13893738825892,1.20876909625805,1.27847417089332,1.34804636742417,1.41747925051201,1.48676621544787,1.55590051477988,1.62487529076398,1.6936836139656,1.76231852820618,1.83077310187269,1.89904048539045,1.96711397440272,2.03498707791168,2.10265359032547,2.17010766604281,2.23734389490933,2.30435737662395,2.37114379198339,2.43769946875309,2.5040214399632,2.57010749256143,2.63595620461334,2.70156696961705,2.76694000697284,2.83207635818896,2.89697786897585,2.96164715794061,3.02608757310307,3.09030313788007,3.15429848849992,3.21807880500182,3.28164973804167,3.34501733367569,3.4081879581425,3.47116822443608,3.53396492218144,3.59658495201545,3.6590352653625,3.72132281019323,3.78345448308229,3.84543708764382,3.90727729922817,3.96898163560968,4.03055643328263,4.0920078289057,4.15334174539097,4.21456388211476,4.27567970872998,4.33669446207795,4.39761314572661,4.45844053169893,4.51918116399577,4.57983936356014,4.64041923437175,4.70092467040165,4.76135936319466,4.82172680988256,4.88203032146269,4.94227303120489,4.94227303120489,5.59977720042142,5.52867205994678,5.45762772131006,5.38664731778111,5.31573416035728,5.24489174617033,5.17412376676509,5.10343411611261,5.03282689819261,4.96230643394808,4.8918772673799,4.82154417051101,4.75131214690939,4.68118643341633,4.61117249968476,4.54127604509098,4.47150299254708,4.40185947871175,4.33235184007925,4.26298659442393,4.19377041709614,4.12471011171003,4.05581257484023,3.9870847544574,3.9185336019859,3.85016601806264,3.7819887923126,3.71400853772978,3.64623162055278,3.57866408683783,3.51131158724083,3.44417930180099,3.3772718667466,3.31059330549451,3.24414696606456,3.17793546706383,3.11196065420277,3.04622356898964,2.9807244308247,2.91546263320608,2.85043675419934,2.78564458075219,2.72108314589478,2.65674877739256,2.59263715604223,2.52874338154272,2.46506204373967,2.40158729703178,2.33831293582721,2.27523246912811,2.21233919257778,2.14962625660152,2.08708672958628,2.02471365535354,1.9625001044687,1.90043921918771,1.83852425205871,1.77674859837271,1.71510582279114,1.65358968057342,1.59219413388869,1.53091336372736,1.46974177793633,1.40867401589131,1.34770495029582,1.28682968656335,1.22604356020028,1.16534213256524,1.10472118533833,1.04417671399169,0.98370492051357,0.923302205601298,0.862965160504732,0.802690558671976,0.742475347322219,0.682316639047222,0.622211703522707,0.56215795939351,0.502152966381537,0.442194417653156,-0.276624353157761],"text":["height: 0.03000000<br />velocitysq: 0.08278503","height: 0.03329114<br />velocitysq: 0.14845896","height: 0.03658228<br />velocitysq: 0.21413288","height: 0.03987342<br />velocitysq: 0.27980681","height: 0.04316456<br />velocitysq: 0.34548073","height: 0.04645570<br />velocitysq: 0.41115466","height: 0.04974684<br />velocitysq: 0.47682858","height: 0.05303797<br />velocitysq: 0.54250251","height: 0.05632911<br />velocitysq: 0.60817643","height: 0.05962025<br />velocitysq: 0.67385036","height: 0.06291139<br />velocitysq: 0.73952428","height: 0.06620253<br />velocitysq: 0.80519821","height: 0.06949367<br />velocitysq: 0.87087213","height: 0.07278481<br />velocitysq: 0.93654606","height: 0.07607595<br />velocitysq: 1.00221998","height: 0.07936709<br />velocitysq: 1.06789391","height: 0.08265823<br />velocitysq: 1.13356783","height: 0.08594937<br />velocitysq: 1.19924176","height: 0.08924051<br />velocitysq: 1.26491568","height: 0.09253165<br />velocitysq: 1.33058961","height: 0.09582278<br />velocitysq: 1.39626353","height: 0.09911392<br />velocitysq: 1.46193746","height: 0.10240506<br />velocitysq: 1.52761138","height: 0.10569620<br />velocitysq: 1.59328531","height: 0.10898734<br />velocitysq: 1.65895923","height: 0.11227848<br />velocitysq: 1.72463316","height: 0.11556962<br />velocitysq: 1.79030709","height: 0.11886076<br />velocitysq: 1.85598101","height: 0.12215190<br />velocitysq: 1.92165494","height: 0.12544304<br />velocitysq: 1.98732886","height: 0.12873418<br />velocitysq: 2.05300279","height: 0.13202532<br />velocitysq: 2.11867671","height: 0.13531646<br />velocitysq: 2.18435064","height: 0.13860759<br />velocitysq: 2.25002456","height: 0.14189873<br />velocitysq: 2.31569849","height: 0.14518987<br />velocitysq: 2.38137241","height: 0.14848101<br />velocitysq: 2.44704634","height: 0.15177215<br />velocitysq: 2.51272026","height: 0.15506329<br />velocitysq: 2.57839419","height: 0.15835443<br />velocitysq: 2.64406811","height: 0.16164557<br />velocitysq: 2.70974204","height: 0.16493671<br />velocitysq: 2.77541596","height: 0.16822785<br />velocitysq: 2.84108989","height: 0.17151899<br />velocitysq: 2.90676381","height: 0.17481013<br />velocitysq: 2.97243774","height: 0.17810127<br />velocitysq: 3.03811166","height: 0.18139241<br />velocitysq: 3.10378559","height: 0.18468354<br />velocitysq: 3.16945951","height: 0.18797468<br />velocitysq: 3.23513344","height: 0.19126582<br />velocitysq: 3.30080736","height: 0.19455696<br />velocitysq: 3.36648129","height: 0.19784810<br />velocitysq: 3.43215521","height: 0.20113924<br />velocitysq: 3.49782914","height: 0.20443038<br />velocitysq: 3.56350306","height: 0.20772152<br />velocitysq: 3.62917699","height: 0.21101266<br />velocitysq: 3.69485091","height: 0.21430380<br />velocitysq: 3.76052484","height: 0.21759494<br />velocitysq: 3.82619876","height: 0.22088608<br />velocitysq: 3.89187269","height: 0.22417722<br />velocitysq: 3.95754661","height: 0.22746835<br />velocitysq: 4.02322054","height: 0.23075949<br />velocitysq: 4.08889446","height: 0.23405063<br />velocitysq: 4.15456839","height: 0.23734177<br />velocitysq: 4.22024231","height: 0.24063291<br />velocitysq: 4.28591624","height: 0.24392405<br />velocitysq: 4.35159016","height: 0.24721519<br />velocitysq: 4.41726409","height: 0.25050633<br />velocitysq: 4.48293801","height: 0.25379747<br />velocitysq: 4.54861194","height: 0.25708861<br />velocitysq: 4.61428586","height: 0.26037975<br />velocitysq: 4.67995979","height: 0.26367089<br />velocitysq: 4.74563371","height: 0.26696203<br />velocitysq: 4.81130764","height: 0.27025316<br />velocitysq: 4.87698157","height: 0.27354430<br />velocitysq: 4.94265549","height: 0.27683544<br />velocitysq: 5.00832942","height: 0.28012658<br />velocitysq: 5.07400334","height: 0.28341772<br />velocitysq: 5.13967727","height: 0.28670886<br />velocitysq: 5.20535119","height: 0.29000000<br />velocitysq: 5.27102512","height: 0.29000000<br />velocitysq: 5.27102512","height: 0.29000000<br />velocitysq: 5.27102512","height: 0.28670886<br />velocitysq: 5.20535119","height: 0.28341772<br />velocitysq: 5.13967727","height: 0.28012658<br />velocitysq: 5.07400334","height: 0.27683544<br />velocitysq: 5.00832942","height: 0.27354430<br />velocitysq: 4.94265549","height: 0.27025316<br />velocitysq: 4.87698157","height: 0.26696203<br />velocitysq: 4.81130764","height: 0.26367089<br />velocitysq: 4.74563371","height: 0.26037975<br />velocitysq: 4.67995979","height: 0.25708861<br />velocitysq: 4.61428586","height: 0.25379747<br />velocitysq: 4.54861194","height: 0.25050633<br />velocitysq: 4.48293801","height: 0.24721519<br />velocitysq: 4.41726409","height: 0.24392405<br />velocitysq: 4.35159016","height: 0.24063291<br />velocitysq: 4.28591624","height: 0.23734177<br />velocitysq: 4.22024231","height: 0.23405063<br />velocitysq: 4.15456839","height: 0.23075949<br />velocitysq: 4.08889446","height: 0.22746835<br />velocitysq: 4.02322054","height: 0.22417722<br />velocitysq: 3.95754661","height: 0.22088608<br />velocitysq: 3.89187269","height: 0.21759494<br />velocitysq: 3.82619876","height: 0.21430380<br />velocitysq: 3.76052484","height: 0.21101266<br />velocitysq: 3.69485091","height: 0.20772152<br />velocitysq: 3.62917699","height: 0.20443038<br />velocitysq: 3.56350306","height: 0.20113924<br />velocitysq: 3.49782914","height: 0.19784810<br />velocitysq: 3.43215521","height: 0.19455696<br />velocitysq: 3.36648129","height: 0.19126582<br />velocitysq: 3.30080736","height: 0.18797468<br />velocitysq: 3.23513344","height: 0.18468354<br />velocitysq: 3.16945951","height: 0.18139241<br />velocitysq: 3.10378559","height: 0.17810127<br />velocitysq: 3.03811166","height: 0.17481013<br />velocitysq: 2.97243774","height: 0.17151899<br />velocitysq: 2.90676381","height: 0.16822785<br />velocitysq: 2.84108989","height: 0.16493671<br />velocitysq: 2.77541596","height: 0.16164557<br />velocitysq: 2.70974204","height: 0.15835443<br />velocitysq: 2.64406811","height: 0.15506329<br />velocitysq: 2.57839419","height: 0.15177215<br />velocitysq: 2.51272026","height: 0.14848101<br />velocitysq: 2.44704634","height: 0.14518987<br />velocitysq: 2.38137241","height: 0.14189873<br />velocitysq: 2.31569849","height: 0.13860759<br />velocitysq: 2.25002456","height: 0.13531646<br />velocitysq: 2.18435064","height: 0.13202532<br />velocitysq: 2.11867671","height: 0.12873418<br />velocitysq: 2.05300279","height: 0.12544304<br />velocitysq: 1.98732886","height: 0.12215190<br />velocitysq: 1.92165494","height: 0.11886076<br />velocitysq: 1.85598101","height: 0.11556962<br />velocitysq: 1.79030709","height: 0.11227848<br />velocitysq: 1.72463316","height: 0.10898734<br />velocitysq: 1.65895923","height: 0.10569620<br />velocitysq: 1.59328531","height: 0.10240506<br />velocitysq: 1.52761138","height: 0.09911392<br />velocitysq: 1.46193746","height: 0.09582278<br />velocitysq: 1.39626353","height: 0.09253165<br />velocitysq: 1.33058961","height: 0.08924051<br />velocitysq: 1.26491568","height: 0.08594937<br />velocitysq: 1.19924176","height: 0.08265823<br />velocitysq: 1.13356783","height: 0.07936709<br />velocitysq: 1.06789391","height: 0.07607595<br />velocitysq: 1.00221998","height: 0.07278481<br />velocitysq: 0.93654606","height: 0.06949367<br />velocitysq: 0.87087213","height: 0.06620253<br />velocitysq: 0.80519821","height: 0.06291139<br />velocitysq: 0.73952428","height: 0.05962025<br />velocitysq: 0.67385036","height: 0.05632911<br />velocitysq: 0.60817643","height: 0.05303797<br />velocitysq: 0.54250251","height: 0.04974684<br />velocitysq: 0.47682858","height: 0.04645570<br />velocitysq: 0.41115466","height: 0.04316456<br />velocitysq: 0.34548073","height: 0.03987342<br />velocitysq: 0.27980681","height: 0.03658228<br />velocitysq: 0.21413288","height: 0.03329114<br />velocitysq: 0.14845896","height: 0.03000000<br />velocitysq: 0.08278503","height: 0.03000000<br />velocitysq: 0.08278503"],"type":"scatter","mode":"lines","line":{"width":3.77952755905512,"color":"transparent","dash":"solid"},"fill":"toself","fillcolor":"rgba(153,153,153,0.4)","hoveron":"points","hoverinfo":"x+y","showlegend":false,"xaxis":"x","yaxis":"y","frame":null}],"layout":{"margin":{"t":44.8252386882524,"r":7.30593607305936,"b":40.1826484018265,"l":31.4155251141553},"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"title":{"text":"<b> Velocity Squared vs Height <\/b>","font":{"color":"rgba(0,0,255,1)","family":"","size":18.5969281859693},"x":0.5,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.017,0.303],"tickmode":"array","ticktext":["0.1","0.2","0.3"],"tickvals":[0.1,0.2,0.3],"categoryorder":"array","categoryarray":["0.1","0.2","0.3"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"y","title":{"text":"Height","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-0.57044443083672,5.89359727810038],"tickmode":"array","ticktext":["0","2","4"],"tickvals":[0,2,4],"categoryorder":"array","categoryarray":["0","2","4"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"x","title":{"text":"Velocity Squared","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false},"source":"A","attrs":{"dad56ac3ba38":{"x":{},"y":{},"type":"scatter"},"dad557f6e94a":{"x":{},"y":{}}},"cur_data":"dad56ac3ba38","visdat":{"dad56ac3ba38":["function (y) ","x"],"dad557f6e94a":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<p><span class="math display">\[g = 9.9775 \pm 0.3335\]</span></p>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="lab-6-simple-harmonic-motion.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="lab-9-conservation-of-momentum.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["Phys225.pdf", "Phys225.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
