@@ -1,6 +1,6 @@
 ---
 title: 'Lab 1: Error Analysis'
-author: "Ionel Tifrea, Leigh Hargreaves, Shovit Bhari"
+author: "Compiled by Shovit Bhari"
 date: "6/5/2020"
 output:
   html_document:
