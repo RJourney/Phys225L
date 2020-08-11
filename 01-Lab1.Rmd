@@ -5,14 +5,20 @@ date: "6/5/2020"
 output:
   html_document:
     df_print: paged
+header-includes:
+  - \usepackage{pdfpages}
 ---
 
 ```{r , include=FALSE}
 library(ggplot2)
+library(knitr)
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## Error Analysis lab file
 
-[Error Analysis](./ErrorNotes_v4.pdf)
+
+
+[Error Analysis](./figures/ErrorNotes_v4.pdf)
+
 
